@@ -94,7 +94,7 @@
           <label class="label text-neutral font-medium">Select A Bank</label>
           <!-- <input id="cashout-number" minlength="11" maxlength="11" type="text" class="input rounded-full bg-[#F4F5F7] w-full " placeholder="Select Bank " value='01916948899' /> -->
 
-        <select id="add money bank" class="select w-full bg-base-200 rounded-full">
+        <select id="add-money-bank" class="select w-full bg-base-200 rounded-full">
          <option disabled selected>Select A Bank</option>
         <option value="DBBl">DBBL</option>
         <option value="IBBL"> IBBL</option>
@@ -104,11 +104,11 @@
           <br>
 
           <label class="label text-neutral font-medium">Bank Account Number</label>
-          <input id="add-money-number" maxlength="11" minlength="11" type="number" class="input rounded-full bg-[#F4F5F7] w-full" placeholder="Enter 11 digit account number" />
+          <input id="add-money-number" maxlength="11" minlength="11" type="number" class="input rounded-full bg-[#F4F5F7] w-full" placeholder="Enter 11 digit account number" value="01916948899" />
 
          <br>
           <label class="label text-neutral font-bold">Amount to Add</label>
-          <input id="add-money-amount" maxlength="4" minlength="4" type="number" class="input rounded-full bg-[#F4F5F7] w-full" placeholder="Add Amount to withdraw" />
+          <input id="add-money-amount" maxlength="11" minlength="11" type="number" class="input rounded-full bg-[#F4F5F7] w-full" placeholder="Add Amount to withdraw" />
          <br>
           <label class="label text-neutral font-medium">Pin Number</label>
           <input id="add-money-pin" maxlength="4" minlength="4" type="password" class="input rounded-full bg-[#F4F5F7] w-full" placeholder="Enter 4 digit pin number" />
@@ -147,5 +147,6 @@
    <!-- java-script added -->
     <script src="script/machine.js"></script>
    <script src="script/cashout.js"></script>
+   <script src="script/addmoney.js"></script>
 </body>
 </html>
