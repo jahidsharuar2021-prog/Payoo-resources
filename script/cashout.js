@@ -10,16 +10,15 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
     }
 
      //2- get the current balance,validate , convert  to number
-    const balanceElement=document.getElementById('balance');
-    const balance=balanceElement.innerText;
-    console.log(balance);
+    const balanceElement=getBalance();
+ 
 
     //3- get the amount ,validate,convert to umber
    const  cashoutAmount=getvalueFromInput('cashout-amount')
    console.log(cashoutAmount);
 
    //4-calculated  new balance
-     const newBalance=Number(balance)-Number(cashoutAmount);
+     const newBalance= balanceElement-Number(cashoutAmount);
      
      if(newBalance<0){
         console.log('Invalid amount');
@@ -34,8 +33,8 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
       //5-1 true:show an alert>set Balance
       alert('cashout successful');
        console.log("new balance",newBalance);
-       balanceElement.innerText=newBalance;
-
+      //  document.getElementById('balance').innerText=newBalance;
+         setBalance(newBalance);
      }
      else{
 
