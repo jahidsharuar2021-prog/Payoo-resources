@@ -24,11 +24,32 @@ document.getElementById('add-money-btn').addEventListener('click',function(){
 
    //4- verfiy the correct pin number
    const pin=getvalueFromInput('add-money-pin');
+
    if(pin=='1234'){
     alert(`add money successful from bank-name
          ${bankAccount} 
          at ${new Date()}`);
     setBalance(newBalance);
+
+     //  Transaction id add korbo
+
+    //1- history container ke dore neye asbo
+    const history=document.getElementById('history-container');
+
+    //2- new div create korbo
+    const newHistory=document.createElement("div");
+
+    //3- new div  innerHTML add korbo
+    newHistory.innerHTML=`
+    <div class="transaction-card p-5 bg-base-100">
+    Add Money Success from
+         ${bankAccount} ,ac-no ${accno} at ${new Date()}
+    
+    </div> `;
+    //4- history container a newdiv append korbo
+    history.append(newHistory);
+
+
    }
    else{
     alert('please enter your correct pin number');

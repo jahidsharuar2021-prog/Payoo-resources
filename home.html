@@ -56,13 +56,13 @@
      
       <!-- grid button design -->
      <div class="button grid grid-cols-3 mt-6 gap-3">
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button onclick="showOnly('add-money')" class="btn flex-col h-full py-4 btn-primary btn-soft">
             <img src="assets/opt-1.png" alt="">
             <p>Add Money</p>
         </button>
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button onclick="showOnly('cashout')" class="btn flex-col h-full py-4 btn-primary btn-soft">
             <img src="assets/opt-2.png" alt="">
-            <p>Add Money</p>
+            <p>cash out</p>
         </button>
         <button class="btn flex-col h-full py-4 btn-primary btn-soft">
             <img src="assets/opt-3.png" alt="">
@@ -72,21 +72,21 @@
             <img src="assets/opt-4.png" alt="">
             <p>Add Money</p>
         </button>
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button  class="btn flex-col h-full py-4 btn-primary btn-soft">
             <img src="assets/opt-5.png" alt="">
             <p>Add Money</p>
         </button>
-        <button class="btn flex-col h-full py-4 btn-primary btn-soft">
+        <button onclick="showOnly('history')" class="btn flex-col h-full py-4 btn-primary btn-soft">
             <img src="assets/opt-1.png" alt="">
-            <p>Add Money</p>
+            <p>Transaction</p>
         </button>
 
      </div>
 
   </section>
 
-  <!-- add money -->
-   <section id="add-money w-11/12 mx-auto">
+  <!-- add money form section -->
+   <section id="add-money" class="w-11/12 mx-auto hidden">
     <h2 class="text-2xl font-bold mb-5">Add money</h2>
     <div class="card bg-base-100 w-full rounded-2xl">
       <div class="card-body ">
@@ -120,8 +120,8 @@
    </section>
 
 
-    <!-- cash-out section -->
-   <section class="cashout w-11/12 mx-auto hidden ">
+    <!-- cash-out form section -->
+   <section id="cashout" class="cashout w-11/12 mx-auto hidden ">
     <h2 class="text-2xl font-bold mb-5">Cash Out</h2>
     <div class="card bg-base-100 w-full rounded-2xl">
       <div class="card-body ">
@@ -142,6 +142,15 @@
         </fieldset>
       </div>
       </div>
+   </section>
+
+   <!-- transaction  history  section -->
+   <section id="history" class="w-11/12 mx-auto py-5 hidden ">
+    <h2 class="text-2xl font-bold mb-5">Transactions</h2>
+
+    <div id="history-container" class="space-y-5">
+
+    </div>
    </section>
 
    <!-- java-script added -->

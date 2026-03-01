@@ -21,7 +21,7 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
      const newBalance= balanceElement-Number(cashoutAmount);
      
      if(newBalance<0){
-        console.log('Invalid amount');
+        alert('Invalid amount');
         return;
      }
 
@@ -32,9 +32,30 @@ document.getElementById('cashout-btn').addEventListener('click',function(){
 
       //5-1 true:show an alert>set Balance
       alert('cashout successful');
-       console.log("new balance",newBalance);
+
       //  document.getElementById('balance').innerText=newBalance;
          setBalance(newBalance);
+
+        
+    //  Transaction id add korbo
+    //1- history container ke dore neye asbo
+    const history=document.getElementById('history-container');
+
+    //2- new div create korbo
+    const newHistory=document.createElement("div");
+
+    //3- new div  innerHTML add korbo
+    newHistory.innerHTML=`
+    <div class="transaction-card p-5 bg-base-100">
+   cashout Success from tk-
+         ${cashoutAmount} ,Number is ${cashoutNumber} at ${new Date()}
+    
+    </div> `;
+    //4- history container a newdiv append korbo
+    history.append(newHistory);
+
+
+   
      }
      else{
 
